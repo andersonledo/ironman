@@ -1,0 +1,41 @@
+Olá,
+
+Segue status detalhado dos últimos acontecimentos do .
+Este report traz detalhes de desenvolvimento, não sendo adequado para exposição ou tratamento no âmbito negocial.
+
+No último mês, foram entregues os seguintes items:
+<PREENCHER ITENS DETALHADOS>
+
+
+Os relatos implementados foram:
+<PREENCHER RELATOS IMPLEMENTADOS 
+
+Os relatos que se encontram em avaliação são:
+<PREENCHER  RELATOS EM AVALIAÇÃO
+
+Os seguintes incidentes foram tratados:
+
+
+E os incidentes que se encontram em progresso:
+1. [DM.059070] - [Incidente] Problema do RG válido (tratado, mas com verificação pelo cliente pendente);
+2. [DM.058856] - Atualizaçao do pagamento
+3. [DM.058795] - Usuário cedido 
+4. [DM.058794] - Habilitação de usuário exonerado
+5. [DM.059391] - Intervalo permitido para acesso do sistema
+
+
+Os seguintes riscos foram identificados ou estão em evidência:
+<PREENCHER RISCOS> <PREENCHER PROGRESSO FISICO> 
+
+Atualmente, o projeto já entregou <PREENCHER RESUMO METRICAS TECNICAS do seu backlog. 
+ 
+As métricas de qualidade técnica indicam:
+Todos os defeitos identificados estão resolvidos e não há novos defeitos cadastrados até 21/06/2016. 
+
+Os seguintes defeitos ainda estão em aberto ou em tratamento:
+As mudanças de escopo identificadas estão em estudo pela equipe sobre sua viabilidade, necessidade para o negócio e impacto no prazo para negociação com o cliente. São elas:(1) tratamento de exceções às regras gerais utilizadas para gestão do fluxo de autorização das solicitações de habilitação e (2) relatórios adicionais solicitados pelo cliente como parte da funcionalidade de Consulta a Logs de Auditoria (item x.y.z do DVP1.1). 
+
+ 
+
+Atenciosamente,
+
