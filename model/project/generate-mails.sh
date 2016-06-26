@@ -36,7 +36,7 @@ NOME_PROJETO=`cat $BASE_PATH/nome-projeto.info`
 DEFEITOS_ABERTOS=`cat $INFO_PATH/defeitos-abertos.info`
 EVENTOS=`cat $INFO_PATH/eventos.info`
 INCIDENTES_EM_PROGRESSO=`cat $INFO_PATH/incidentes-em-progresso.info`
-INCIDENTE_TRATADOS=`cat $INFO_PATH/incidentes-tratados.info`
+INCIDENTES_TRATADOS=`cat $INFO_PATH/incidentes-tratados.info`
 ITENS_DETALHADOS=`cat $INFO_PATH/itens-detalhados.info`
 MUDANCA_ESCOPO=`cat $INFO_PATH/mudanca-escopo.info`
 OBJETIVOS=`cat $INFO_PATH/objetivos.info`
@@ -62,7 +62,7 @@ echo "Generating email for inviting people for key events."
 $TPATH/./invite-for-key-events.sh "$EVENTOS" "$RODAPE" > $MAILS_PATH/invite-for-key-events.mail
 
 echo "Generating email for detailed project report."
-$TPATH/./project-detailed-report.sh "$NOME_PROJETO" "$ITENS_DETALHADOS" "$RELATOS_IMPLEMENTADOS" "$RELATOS_EM_AVALIACAO" "$INCIDENTES_TRATADOS" "$INCIDENTES_EM_PROGRESSO" "$RISCOS $PROGRESSO_FISICO" "$RESUMO_METRICAS" "$DEFEITOS_ABERTOS" "$MUDANCA_ESCOPO" "$RODAPE" > $MAILS_PATH/project-detailed-report.mail 
+$TPATH/./project-detailed-report.sh "$NOME_PROJETO" "$ITENS_DETALHADOS" "$RELATOS_IMPLEMENTADOS" "$RELATOS_EM_AVALIACAO" "$INCIDENTES_TRATADOS" "$INCIDENTES_EM_PROGRESSO" "$RISCOS" "$PROGRESSO_FISICO" "$RESUMO_METRICAS" "$DEFEITOS_ABERTOS" "$MUDANCA_ESCOPO" "$RODAPE" > $MAILS_PATH/project-detailed-report.mail 
 
 echo "Generationg email for executive report."
 $TPATH/./project-executive-report.sh "$NOME_PROJETO" "$RESULTADOS_OBTIDOS" "$PROGRESSO_FISICO" "$PLANO_PROXIMO_MES" "$PONTOS_ATENCAO" "$PROXIMOS_EVENTOS_IMPORTANTES" "$RODAPE" > $MAILS_PATH/project-executive-report.mail
