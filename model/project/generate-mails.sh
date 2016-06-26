@@ -50,6 +50,9 @@ RISCOS=`cat $INFO_PATH/riscos.info`
 RODAPE=`cat $BASE_PATH/rodape.info`
 PONTOS_ATENCAO=`cat $INFO_PATH/pontos-atencao.info`
 
+RESULTADOS_OBTIDOS=`cat $INFO_PATH/resultados-obtidos.info`
+PLANO_PROXIMA_FASE=`cat $INFO_PATH/plano-proxima-fase.info`
+PROXIMOS_EVENTOS_IMPORTANTES=`cat $INFO_PATH/proximos-eventos-importantes.info`
 
 
 #CALL GENERATOR SCRIPT 
@@ -65,7 +68,7 @@ echo "Generating email for detailed project report."
 $TPATH/./project-detailed-report.sh "$NOME_PROJETO" "$ITENS_DETALHADOS" "$RELATOS_IMPLEMENTADOS" "$RELATOS_EM_AVALIACAO" "$INCIDENTES_TRATADOS" "$INCIDENTES_EM_PROGRESSO" "$RISCOS" "$PROGRESSO_FISICO" "$RESUMO_METRICAS" "$DEFEITOS_ABERTOS" "$MUDANCA_ESCOPO" "$RODAPE" > $MAILS_PATH/project-detailed-report.mail 
 
 echo "Generationg email for executive report."
-$TPATH/./project-executive-report.sh "$NOME_PROJETO" "$RESULTADOS_OBTIDOS" "$PROGRESSO_FISICO" "$PLANO_PROXIMO_MES" "$PONTOS_ATENCAO" "$PROXIMOS_EVENTOS_IMPORTANTES" "$RODAPE" > $MAILS_PATH/project-executive-report.mail
+$TPATH/./project-executive-report.sh "$NOME_PROJETO" "$RESULTADOS_OBTIDOS" "$PROGRESSO_FISICO" "$PLANO_PROXIMA_FASE" "$PONTOS_ATENCAO" "$PROXIMOS_EVENTOS_IMPORTANTES" "$RODAPE" > $MAILS_PATH/project-executive-report.mail
 
 echo "Generationg email for remembering people of the next events."
 $TPATH/./remember-next-events.sh "$PROXIMOS_EVENTOS_IMPORTANTES" > $MAILS_PATH/remember-next-events.mail
