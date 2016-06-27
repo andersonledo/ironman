@@ -50,6 +50,7 @@ $RESUMO_METRICAS_TECNICAS
 Os seguintes defeitos ainda estão em aberto ou em tratamento:
 $DEFEITOS_ABERTOS 
 
+Quanto à  gestão de escopo, os seguintes pontos encontram em avaliação: 
 $MUDANCA_ESCOPO 
 
 Atenciosamente,

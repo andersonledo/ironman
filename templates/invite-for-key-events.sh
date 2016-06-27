@@ -2,6 +2,7 @@
 
 #parameters
 EVENTOS=$1
+RODAPE=$2
 
 #template
 cat << EOF 
