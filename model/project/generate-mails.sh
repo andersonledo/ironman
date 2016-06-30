@@ -22,6 +22,11 @@ echo "Defining folder \"$TPATH\" as the source for templates."
 
 MAILS_PATH="$ITERATION_FOLDER/mails"
 echo "Defining folder \"$MAILS_PATH\" as the target for mails."
+if [ ! -d "$MAILS_PATH" ]; then
+  mkdir "$MAILS_PATH"
+  echo "Folder $MAILS_PATH created."
+fi
+
 
 INFO_PATH="$ITERATION_FOLDER/info"
 echo "Defining folder \"$INFO_PATH\" as the source for information of the project."

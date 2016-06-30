@@ -20,6 +20,7 @@ PROJECTS_PATH="../projects"
 #checks if the path 'projects' exists and creates it otherwise.
 if [ ! -d "$PROJECTS_PATH" ]; then
   mkdir "$PROJECTS_PATH"
+  echo "Folder $PROJECTS_PATH created."
 fi
 
 NEW_PROJECT="$PROJECTS_PATH/$project_name"
