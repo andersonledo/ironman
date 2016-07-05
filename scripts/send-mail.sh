@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# TODO: only one recipient can receive mails today.
+# TODO: the operation needs to be atomic, if an error occur while reading the parameters, mail should no be sent. If mail could not be sent, mail file should not be moved to sent folder.
+
 #validate arguments
 # $1 - recipients path
 # $2 - mail file to send
@@ -19,9 +22,9 @@ fi
 BASE_PATH="./.."
 echo "Defining folder \"$BASE_PATH\" as the base path for info."
 
-MAIL_USER=`cat $BASE_PATH/user.address`
+MAIL_USER=`cat $BASE_PATH/user.name`
 MAIL_SERVER=`cat $BASE_PATH/mail-server.address`
-MAIL_USER=`cat $BASE_PATH/user.address`
+MAIL_USER=`cat $BASE_PATH/user.name`
 MAIL_RCPTS=`cat $1`
 
 
