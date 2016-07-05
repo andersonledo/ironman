@@ -12,6 +12,7 @@ RODAPE=$7
 
 #template
 cat << EOF 
+Subject:[$NOME_PROJETO - $FASE_PROJETO] Status report
 Bom dia,
 
 Segue status das atividades do $NOME_PROJETO no último mês.  

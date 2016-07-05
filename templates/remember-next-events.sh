@@ -7,7 +7,7 @@ RODAPE=$2
 #template
 
 cat << EOF 
-
+Subject: [$NOME_PROJETO - $FASE_PROJETO] Próximos eventos
 Pessoal,
 
 Lembrando que nos próximos dias temos os seguintes eventos:
