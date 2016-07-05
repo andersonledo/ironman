@@ -4,6 +4,18 @@
 # $1 - recipients path
 # $2 - mail file to send
 
+
+E_BADARGS=85
+
+# check for arguments
+if [ -z "$1" ] || [ -z "$2" ]
+then
+  echo "Usage: `basename $0` path/to/recipients/file path/to/mail/file"
+  exit $E_BADARGS 
+fi
+
+
+
 BASE_PATH="./.."
 echo "Defining folder \"$BASE_PATH\" as the base path for info."
 
@@ -23,3 +35,6 @@ then
 fi
 mv $2 sent/`basename $2`.mail
 
+
+#exit with success
+exit 0
