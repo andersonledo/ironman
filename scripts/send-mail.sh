@@ -27,8 +27,7 @@ MAIL_SERVER=`cat $BASE_PATH/mail-server.address`
 MAIL_USER=`cat $BASE_PATH/user.name`
 MAIL_RCPTS=`cat $1`
 
-
-curl --ssl --mail-from "<$MAIL_USER@$MAIL_SERVER>" --mail-rcpt "$MAIL_RCPTS" --verbose --url smtp://smtp.$MAIL_SERVER:587 -u $MAIL_USER -T $2 --insecure
+curl --ssl --mail-from "<$MAIL_USER@$MAIL_SERVER>" $MAIL_RCPTS --verbose --url smtp://smtp.$MAIL_SERVER:587 -u $MAIL_USER -T $2 --insecure
 
 #if sent/ folder does not exists
 if [ ! -d sent/ ]
