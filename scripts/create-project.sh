@@ -34,4 +34,5 @@ echo "$project_name" > $PROJECTS_PATH/$project_name/nome-projeto.info
 
 echo "Projeto $project_name criado com sucesso na pasta $PROJECTS_PATH."
 
+
 exit 0

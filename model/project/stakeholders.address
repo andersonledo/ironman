@@ -1,1 +1,1 @@
---mail-rcpt "<user.name@your.server>" --mail-rcpt "<user.name@your.server>" --mail-rcpt "<user.name@your.server>"
+--mail-rcpt username1@mail.server.domain --mail-rcpt username2@another.mail.server.domain
