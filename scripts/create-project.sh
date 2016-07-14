@@ -1,4 +1,4 @@
-#!/bin/sh
+#!magic
 
 E_BADARGS=85
 
