@@ -1,3 +1,9 @@
+# This file is intentionally left without an interpreter declaration.
+# You should run this file with your local sh interpreter.
+# After running it, it will set a symbolic link to your local sh interpreter.
+# This link will be used in all the other scripts.
+
+
 echo "Trying to set up sh env..."
 
 magic=`which sh`

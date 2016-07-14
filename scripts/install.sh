@@ -1,4 +1,4 @@
-#!/bin/sh
+#!magic
 
 echo "Installing dependencies. Your action may be required."
 

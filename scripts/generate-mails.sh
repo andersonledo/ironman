@@ -1,4 +1,4 @@
-#!/bin/bash
+#!magic
 
 E_BADARGS=85
 
