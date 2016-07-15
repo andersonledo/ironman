@@ -1,100 +1,36 @@
-#!/bin/bash
+s is a program that keeps your address book up to date.
 
-key="no value yet"
-while true; do
-  clear
-  echo "Bash Extra Keys Demo. Keys to try:"
-  echo
-  echo "* Insert, Delete, Home, End, Page_Up and Page_Down"
-  echo "* The four arrow keys"
-  echo "* Tab, enter, escape, and space key"
-  echo "* The letter and number keys, etc."
-  echo
-  echo "    d = show date/time"
-  echo "    q = quit"
-  echo "================================"
-  echo
+friends="/var/tmp/michel/friends"
 
- # Convert the separate home-key to home-key_num_7:
- if [ "$key" = $'\x1b\x4f\x48' ]; then
-  key=$'\x1b\x5b\x31\x7e'
-  #   Quoted string-expansion construct. 
- fi
+echo "Hello, "$USER".  This script will register you in Michel's friends database."
 
- # Convert the separate end-key to end-key_num_1.
- if [ "$key" = $'\x1b\x4f\x46' ]; then
-  key=$'\x1b\x5b\x34\x7e'
- fi
+echo -n "Enter your name and press [ENTER]: "
+read name
+echo -n "Enter your gender and press [ENTER]: "
+read -n 1 gender
+echo
 
- case "$key" in
-  $'\x1b\x5b\x32\x7e')  # Insert
-   echo Insert Key
-  ;;
-  $'\x1b\x5b\x33\x7e')  # Delete
-   echo Delete Key
-  ;;
-  $'\x1b\x5b\x31\x7e')  # Home_key_num_7
-   echo Home Key
-  ;;
-  $'\x1b\x5b\x34\x7e')  # End_key_num_1
-   echo End Key
-  ;;
-  $'\x1b\x5b\x35\x7e')  # Page_Up
-   echo Page_Up
-  ;;
-  $'\x1b\x5b\x36\x7e')  # Page_Down
-   echo Page_Down
-  ;;
-  $'\x1b\x5b\x41')  # Up_arrow
-   echo Up arrow
-  ;;
-  $'\x1b\x5b\x42')  # Down_arrow
-   echo Down arrow
-  ;;
-  $'\x1b\x5b\x43')  # Right_arrow
-   echo Right arrow
-  ;;
-  $'\x1b\x5b\x44')  # Left_arrow
-   echo Left arrow
-  ;;
-  $'\x09')  # Tab
-   echo Tab Key
-  ;;
-  $'\x0a')  # Enter
-   echo Enter Key
-  ;;
-  $'\x1b')  # Escape
-   echo Escape Key
-  ;;
-  $'\x20')  # Space
-   echo Space Key
-  ;;
-  d)
-   date
-  ;;
-  q)
-  echo Time to quit...
-  echo
-  exit 0
-  ;;
-  *)
-   echo You pressed: \'"$key"\'
-  ;;
- esac
+grep -i "$name" "$friends"
 
- echo
- echo "================================"
+if  [ $? == 0 ]; then
+  echo "You are already registered, quitting."
+  exit 1
+elif [ "$gender" == "m" ]; then
+  echo "You are added to Michel's friends list."
+  exit 1
+else
+  echo -n "How old are you? "
+  read age
+  if [ $age -lt 25 ]; then
+    echo -n "Which colour of hair do you have? "
+    read colour
+    echo "$name $age $colour" >> "$friends" 
+    echo "You are added to Michel's friends list.  Thank you so much!"
+  else
+    echo "You are added to Michel's friends list."
+    exit 1
+  fi
+fi
 
- unset K1 K2 K3
- read -s -N1 -p "Press a key: "
- K1="$REPLY"
- read -s -N2 -t 0.001
- K2="$REPLY"
- read -s -N1 -t 0.001
- K3="$REPLY"
- key="$K1$K2$K3"
-
-done
-
-exit $?
+exit 0
 
