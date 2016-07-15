@@ -1,8 +1,13 @@
-s is a program that keeps your address book up to date.
+#!magic
 
-friends="/var/tmp/michel/friends"
+clear
+splash=`cat splash.screen`
+echo "$splash"
+sleep 3
 
-echo "Hello, "$USER".  This script will register you in Michel's friends database."
+clear
+header=`cat header.screen`
+echo "$header"
 
 echo -n "Enter your name and press [ENTER]: "
 read name
