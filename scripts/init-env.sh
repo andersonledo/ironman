@@ -13,13 +13,22 @@ echo "found the $magic_name magic."
 
 if [ $magic_name = "sh"  ]
 then
-   if [ ! -e magic ]
+   if [ ! -e ~/.ironman/magic ]
    then
-      ln -s $magic magic
-      echo "magic file created."
+      mkdir ~/.ironman
+      ln -s $magic ~/.ironman/magic
+      echo "magic file created in ~/.ironman."
    else
       echo "we already have some magic here."
    fi
 else
    echo "sorry. we could not create the magic here."
 fi
+
+PROJECTS_PATH="../projects"
+export PROJECTS_PATH
+echo "Projects path exported as: $PROJECTS_PATH."
+
+
+exit $?
+

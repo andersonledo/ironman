@@ -1,4 +1,4 @@
-#!magic
+#!~/.ironman/magic
 
 # TODO: only one recipient can receive mails today.
 # TODO: the operation needs to be atomic, if an error occur while reading the parameters, mail should no be sent. If mail could not be sent, mail file should not be moved to sent folder.

@@ -1,4 +1,4 @@
-#!magic
+#!~/.ironman/magic
 
 E_BADARGS=85
 
