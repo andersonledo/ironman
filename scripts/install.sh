@@ -1,4 +1,4 @@
-#!~/.ironman/magic
+#!/usr/bin/env sh
 
 echo "Installing dependencies. Your action may be required."
 

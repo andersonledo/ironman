@@ -1,4 +1,4 @@
-#!~/.ironman/magic 
+#!/usr/bin/env sh 
 
 echo " ======= IMPORTANT NOTE ======= "
 echo " * You should be very sure about running this script because it is going to uninstall some packages and it may cause some collateral effect on your system."
