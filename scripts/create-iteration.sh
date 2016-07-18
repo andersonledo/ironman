@@ -1,4 +1,4 @@
-#!~/.ironman/magic
+#!/usr/bin/env sh
 
 E_BADARGS=85
 
