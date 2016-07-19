@@ -1,4 +1,4 @@
-#!magic
+#!/usr/bin/env bash
 
 clear
 splash=`cat splash.screen`
@@ -8,6 +8,31 @@ sleep 3
 clear
 header=`cat header.screen`
 echo "$header"
+
+
+select OPTION in MAILS PROJECT
+do
+   case $OPTION in
+      MAILS)
+	mails()
+        break
+   	;;
+      PROJECT)
+        projects()
+        break
+        ;;
+      none)
+        break
+        ;;
+      *) 
+        echo "Erro - escolha uma opção válida."
+        ;;
+   esac
+done
+
+
+
+
 
 echo -n "Enter your name and press [ENTER]: "
 read name
@@ -36,6 +61,18 @@ else
     exit 1
   fi
 fi
+
+
+function mails {
+   echo ">>> MAILS"
+}
+
+function projects {
+   echo ">>> PROJECTS"
+}
+
+
+
 
 exit 0
 

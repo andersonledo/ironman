@@ -25,6 +25,19 @@ else
    echo "sorry. we could not create the magic here."
 fi
 
+
+default_rcpts=~/.ironman/default_recipients
+if [ ! -e $default_rcpts ]
+then
+   mkdir $default_rcpts 
+   example=$default_rcpts/example.address
+   touch $example  
+   echo "meuemail@mail.com" > $example 
+fi
+
+
+
+
 PROJECTS_PATH="../projects"
 export PROJECTS_PATH
 echo "Projects path exported as: $PROJECTS_PATH."
