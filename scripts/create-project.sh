@@ -30,9 +30,13 @@ if [ -d "$NEW_PROJECT" ]; then
 fi 
 
 cp -r $MODELS_PATH/project $NEW_PROJECT
+
+#removing iteration model from the real project
+rm -rf $NEW_PROJECT/iteration
+
 echo "$project_name" > $PROJECTS_PATH/$project_name/nome-projeto.info
 
-echo "Projeto $project_name criado com sucesso na pasta $PROJECTS_PATH."
+echo "Projeto ${project_name} criado com sucesso na pasta $PROJECTS_PATH."
 
 
 exit 0
