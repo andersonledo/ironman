@@ -4,7 +4,7 @@ source "menu/mails-menu.sh"
 source "menu/projects-menu.sh"
 
 function main_menu {
-  select OPTION in MAILS PROJECT;
+  select OPTION in MAILS PROJECT EXIT;
   do
     case $OPTION in
       MAILS)
@@ -13,7 +13,9 @@ function main_menu {
       PROJECT)
         project_options
         ;;
-      none)
+      EXIT)
+        echo "Leaving program..."
+        sleep 0.5
         break
         ;;
       *) 
