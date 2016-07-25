@@ -1,4 +1,4 @@
-#!/bin/sh
+#!magic-sh
 
 for i in *.info; do
   cat /dev/null > $i

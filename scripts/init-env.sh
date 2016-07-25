@@ -4,26 +4,38 @@
 # This link will be used in all the other scripts.
 
 
-echo "Trying to set up sh env..."
+function create_magic {
+  magic=$1
+  magic_name=`basename $magic`
+  echo "found the $magic_name magic."
 
+  if [ ! -e magic-$magic_name ]
+  then
+    ln -s $magic magic-$magic_name
+    echo "magic-$magic_name file created"
+  else
+    echo "we already have some magic-$magic_name here."
+  fi
+}
+
+
+echo "Trying to set up sh env..."
 magic=`which sh`
 echo $magic
-magic_name=`basename $magic`
-echo "found the $magic_name magic."
+create_magic $magic
 
-if [ $magic_name = "sh"  ]
+
+echo "Trying to set up bash env..."
+magic=`which bash`
+echo $magic
+create_magic $magic
+
+
+if [ ! -e ~/.ironman ]
 then
-   if [ ! -e ~/.ironman/magic ]
-   then
-      mkdir ~/.ironman
-      ln -s $magic ~/.ironman/magic
-      echo "magic file created in ~/.ironman."
-   else
-      echo "we already have some magic here."
-   fi
-else
-   echo "sorry. we could not create the magic here."
+  mkdir ~/.ironman
 fi
+
 
 
 default_rcpts=~/.ironman/default_recipients

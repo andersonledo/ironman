@@ -19,15 +19,17 @@ do
                   do
                      iteration $it
                   done
-                  break;
+                  #break;
                   ;;
                create-iteration)
 	          ./create-iteration.sh $project
-                  break;
+                  stop_single_project_menu=true
+                  sleep 1
+                  #break;
 		  ;;
                configure-project)
                   echo "configure project."
-                  break;
+                  #break;
                   ;;
                BACK)
                   stop_single_project_menu=true
@@ -40,7 +42,7 @@ do
              esac 
            done #select opt
            break; #the select loop needs to stop asking for an option.
-     done #select project      
+     done #select project
 done #while
 
    

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!magic-sh
 
 echo "=== Files not edited yet ==="
 for file in *.info

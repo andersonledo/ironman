@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!magic-bash
 
 source "menu/header.sh"
 source "menu/splash.sh"

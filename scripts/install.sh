@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!magic-sh
 
 echo "Installing dependencies. Your action may be required."
 

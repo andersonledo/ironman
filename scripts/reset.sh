@@ -1,4 +1,4 @@
-#!/bin/sh
+#!magic-sh
 
 for file in *.info
 do

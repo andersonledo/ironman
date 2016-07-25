@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!magic-sh
 
 E_BADARGS=85
 
